@@ -31,6 +31,9 @@ For production use:
 - _npm i node_
 - _npm init vue@latest_
 
+To use VUE from CDN:
+- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 When you are ready to ship your app to production, run the following:
 - _npm run build_
 

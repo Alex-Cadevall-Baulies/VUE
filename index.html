@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VUE Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
+
 <body>
-    
+    <h1>VUE Test</h1>
+    <div id="app1"> <!-- everything inside this DIV belongs to app1 in app.js -->
+        <p>{{ props }}</p>
+        <p>{{ title }} - {{ moreCode }} - {{ number }} </p>
+        <p id="functionTest"> - {{ functionTest }}</p>
+
+        <!-- v-on translates as eventListener -->
+        <button v-on:click="number++">increase number</button>
+        <button v-on:click="number--">decrease number</button>
+    <br></br>
+
+        <!-- v-on can be changed as @+event -->
+        <div id="where" @click="whereAmI"> click -- Where am I -- click</div>
+        <div id="update" @click="updateFunction"> click -- Can I use functions? -- click</div>
+        <br></br>
+
+        <div>
+        <p>Is there a secret message? </p>
+        <!-- v-if can be treated as if statement -->
+        <div v-if="isTrue"> <!-- checks isTrue from app.js value, if false doesn't show message -->
+           <b><p>{{ trueMessage }}</p></b>
+        </div>
+
+         <!--this button will change statement to true or false, the button message will also change -->
+        <button @click="toggle">
+            <span v-if="isTrue"> hide secret message </span>
+            <span v-else> show secret message </span>
+        </button>
+        </div>
+    </div>
+    <script type = 'Module' src="app.js"></script>
 </body>
+
 </html>
