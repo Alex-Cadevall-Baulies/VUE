@@ -79,7 +79,7 @@
         <!-- v-bind image example -->
         <div>
             <li v-for=" cover in avrilCovers">
-            <img v-bind:src="cover.cover" v-bind:href="cover.url">
+            <a :href="cover.url"><img :src="cover.image" :alt="cover.name"></a>
         </li>
         </div>
     </div>

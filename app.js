@@ -20,8 +20,8 @@ const app1 = Vue.createApp({
             url: 'https://www.youtube.com/watch?v=Bg59q4puhmg',
             url2: 'https://www.youtube.com/watch?v=5NPBIwQyPWE',
             avrilCovers: [
-                {url: 'https://www.youtube.com/watch?v=Bg59q4puhmg', cover: "images/av1.jpg"},
-                {url: 'https://www.youtube.com/watch?v=5NPBIwQyPWE', cover: "images/av2.jpg"},
+                {url: 'https://www.youtube.com/watch?v=Bg59q4puhmg', image: "images/av1.jpg", name: "girlfriend"},
+                {url: 'https://www.youtube.com/watch?v=5NPBIwQyPWE', image: "images/av2.jpg", name: "complicated"},
             ]
         }
     },
