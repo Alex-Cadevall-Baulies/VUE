@@ -18,7 +18,11 @@ const app1 = Vue.createApp({
                 {title: 'IQ84', genre: 'magical realism'},
             ],
             url: 'https://www.youtube.com/watch?v=Bg59q4puhmg',
-            url2: 'https://www.youtube.com/watch?v=5NPBIwQyPWE'
+            url2: 'https://www.youtube.com/watch?v=5NPBIwQyPWE',
+            avrilCovers: [
+                {url: 'https://www.youtube.com/watch?v=Bg59q4puhmg', cover: "images/av1.jpg"},
+                {url: 'https://www.youtube.com/watch?v=5NPBIwQyPWE', cover: "images/av2.jpg"},
+            ]
         }
     },
 

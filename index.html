@@ -69,11 +69,18 @@
         <!-- v-bind allows us to use attribute binding (bind dynamic elements) -->
         <div>
             <!-- in this case we bind an url from our data, which we may change at a latter date -->
-            <img src="" alt="">
             <a v-bind:href="url">Hyperlink Test</a> <br></br>
             <!-- : is the v-bind equivalent -->
-            <img src="" alt="">
             <a :href="url2">Hyperlink Test 2</a>
+        </div>
+
+        <br></br>
+
+        <!-- v-bind image example -->
+        <div>
+            <li v-for=" cover in avrilCovers">
+            <img v-bind:src="cover.cover" v-bind:href="cover.url">
+        </li>
         </div>
     </div>
     <script type = 'Module' src="app.js"></script>
