@@ -9,7 +9,16 @@ const app1 = Vue.createApp({
             number : 7,
             functionTest : () => {console.log(`hello world`)}, //does not allow to send function
             isTrue : false,
-            trueMessage : "Yes it is!"
+            trueMessage : "Yes it is!",
+            x: 0,
+            y: 0,
+            books : [
+                {title: 'lost land', genre: 'sci-fi, fantasy'},
+                {title: 'bag of bones', genre: 'thriller, horror'},
+                {title: 'IQ84', genre: 'magical realism'},
+            ],
+            url: 'https://www.youtube.com/watch?v=Bg59q4puhmg',
+            url2: 'https://www.youtube.com/watch?v=5NPBIwQyPWE'
         }
     },
 
@@ -37,6 +46,24 @@ const app1 = Vue.createApp({
 
         toggle() {
             this.isTrue = !this.isTrue
+        },
+
+        handleEvent(event, param) {
+            console.log('event')
+            // Each time an event is produced we send it as a parameter to the function
+            console.log(event, event.type)
+            
+            //we can also send a second param if needed
+            if (param) {
+                console.log(param)
+            }
+        },
+
+        handleMouseMove(event){
+
+            //using event we are updating x and y values based on the offset postion of our mouse in the box
+            this.x = event.offsetX,
+            this.y = event.offsetY
         }
     }
 

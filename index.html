@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VUE Test</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -16,29 +17,63 @@
         <p>{{ props }}</p>
         <p>{{ title }} - {{ moreCode }} - {{ number }} </p>
         <p id="functionTest"> - {{ functionTest }}</p>
-
+        
         <!-- v-on translates as eventListener -->
         <button v-on:click="number++">increase number</button>
         <button v-on:click="number--">decrease number</button>
-    <br></br>
-
+        <br></br>
+        
         <!-- v-on can be changed as @+event -->
         <div id="where" @click="whereAmI"> click -- Where am I -- click</div>
         <div id="update" @click="updateFunction"> click -- Can I use functions? -- click</div>
         <br></br>
-
+        
         <div>
-        <p>Is there a secret message? </p>
-        <!-- v-if can be treated as if statement -->
-        <div v-if="isTrue"> <!-- checks isTrue from app.js value, if false doesn't show message -->
+            <p>Is there a secret message? </p>
+            <!-- v-if can be treated as if statement -->
+            <div v-if="isTrue"> <!-- checks isTrue from app.js value, if false doesn't show message -->
            <b><p>{{ trueMessage }}</p></b>
         </div>
-
+        
          <!--this button will change statement to true or false, the button message will also change -->
-        <button @click="toggle">
-            <span v-if="isTrue"> hide secret message </span>
-            <span v-else> show secret message </span>
-        </button>
+         <button @click="toggle">
+             <span v-if="isTrue"> hide secret message </span>
+             <span v-else> show secret message </span>
+            </button>
+        </div>
+        
+        <br></br>
+        
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleEvent">mouse over</div>
+        <div class="box" @mouseleave="handleEvent">mouse leave</div>
+        <!-- we can also pass parameters using (), if we also want to send the event we type $event -->
+        <div class="box" @dblclick="handleEvent($event, 'I am a param')">double click</div>
+        <div class="box" @mousemove="handleMouseMove"> - position {{x}} - {{y}} - </div>
+
+        <br></br>
+
+        <!-- show array -->
+        <div>
+            <ul>
+                <!-- v-for cicles through the item name used -->
+                <li v-for=" item in books">
+                    <h3> {{ item.title }} </h3>
+                    <p> {{ item.genre }}</p>
+                </li>
+            </ul>
+        </div>
+
+        <br></br>
+
+        <!-- v-bind allows us to use attribute binding (bind dynamic elements) -->
+        <div>
+            <!-- in this case we bind an url from our data, which we may change at a latter date -->
+            <img src="" alt="">
+            <a v-bind:href="url">Hyperlink Test</a> <br></br>
+            <!-- : is the v-bind equivalent -->
+            <img src="" alt="">
+            <a :href="url2">Hyperlink Test 2</a>
         </div>
     </div>
     <script type = 'Module' src="app.js"></script>
