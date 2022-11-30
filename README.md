@@ -31,16 +31,21 @@ For production use:
 - _npm i node_
 - _npm init vue@latest_
 
-To use VUE from CDN:
-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+Once build is installed:
+- cd <your-project-name>
+- npm install
+- npm run dev
 
 When you are ready to ship your app to production, run the following:
 - _npm run build_
 
+To use VUE from CDN:
+- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 ### DOC used:
 - https://vuejs.org/guide/introduction.html
 - https://www.youtube.com/watch?v=YrxBCBibVo0&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=1
+- Pluralsight 
 
 ### VC Extensions Used:
 - Vue Language Features (Volar)
