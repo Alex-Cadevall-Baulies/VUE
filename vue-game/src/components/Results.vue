@@ -12,7 +12,16 @@
             }
         },
         mounted() {
-            if( this.score < 250) {
+            if(this.score < 250) {
+                this.rank = 'Supafast'
+            } else if (this.score < 400) {
+                this.rank = 'Not bad!'
+            } else {
+                this.rank = 'Too slow...'
+            }
+        },
+        updated() {
+            if(this.score < 250) {
                 this.rank = 'Supafast'
             } else if (this.score < 400) {
                 this.rank = 'Not bad!'
@@ -20,6 +29,5 @@
                 this.rank = 'Too slow...'
             }
         }
-
     }
 </script>
