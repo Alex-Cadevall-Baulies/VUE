@@ -2,20 +2,25 @@
 <h1>{{ title }}</h1>
 <!--  disabled property makes button unclickable if game = true -->
 <button @click="toggleGame" :disabled="game"> Play Game </button>
-<Block v-if="game" :delay='delay'/>
+<!--  we send delay data and receive reactionTime from gameEnd in Block.vue -->
+<Block v-if="game" :delay='delay' @gameEnd="gameEnded"/>
+<Results v-if="showResults" :score="score"/>
 </template>
 
 <script>
 //import Result from './components/Results.vue'
 import Block from './components/Block.vue'
+import Results from './components/Results.vue'
 
 export default {
-  components: { Block },
+  components: { Block, Results },
   data() {
     return{
     title: 'Vue Game',
     game: false,
-    delay: null
+    delay: null, 
+    score: null,
+    showResults: false
     }
   },
   methods: {
@@ -24,6 +29,14 @@ export default {
       this.delay = 2000 + Math.random() * 5000 
       this.game = !this.game
       console.log(this.delay)
+    },
+
+    gameEnded(reactionTime) {
+      //we send reaction time info to score
+      this.score = reactionTime
+      // we return game to false to reactivate button
+      this.game = false
+      this.showResults = true
     }
   }
 }
