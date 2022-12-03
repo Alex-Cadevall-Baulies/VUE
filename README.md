@@ -36,6 +36,8 @@ Once build is installed:
 - npm install
 - npm run dev
 
+*(we can also select vue router during vue new project: Add Vue Router for Single Page Application development? (y))*
+
 When you are ready to ship your app to production, run the following:
 - _npm run build_
 
