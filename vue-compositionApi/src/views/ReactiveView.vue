@@ -1,12 +1,13 @@
 <template>
   <div class="reactive">
     <h1>This is a reactive page</h1>
-  </div>
+  
 
   <div>
     <p>My name is {{ information.name }} my age is {{ information.age}}</p>
     <button @click="updateValues">Update</button>
   </div>
+</div>
 </template>
 
 <script>

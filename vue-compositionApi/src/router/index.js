@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'computed',
       component: () => import('../views/ComputedView.vue')
     },
+    {
+      path: '/extra',
+      name: 'extra',
+      component: () => import('../views/ExtraView.vue')
+    }
   ]
 })
 

@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "name": "Camila",
+            "age": 23,
+            "id": 1,
+            "description": "Everyone knows about it"
+        },
+        {
+            "name": "Loretta",
+            "age": 28,
+            "id": 2,
+            "description": "A seven nation army couldn't hold me back "
+        },    
+        {
+            "name": "Markus",
+            "age": 22,
+            "id": 3,
+            "description": "And the feeling coming from my bones says, Find a home"
+        }
+        ]
+    }

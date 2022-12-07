@@ -1,7 +1,7 @@
 <template>
     <div class="computed">
         <h1>This is a computed page</h1>
-    </div>
+    
 
     <input type="text" v-model="search">
     <p>searching for {{ search }}</p>
@@ -9,6 +9,7 @@
         <p>My name is {{ name }}</p>
     </div>
     <button @click="handleClick">Stop watch</button>
+    </div>
 </template>
 
 <script>

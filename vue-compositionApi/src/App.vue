@@ -4,7 +4,8 @@
 <div class="wrapper">
   <RouterLink :to="{ name: 'ref'}"> Ref View</RouterLink>
   <RouterLink :to="{ name: 'reactive'}"> Reactive View</RouterLink>
-  <RouterLink :to="{ name: 'computed'}"> computed View</RouterLink>
+  <RouterLink :to="{ name: 'computed'}"> Computed View</RouterLink>
+  <RouterLink :to="{ name: 'extra'}"> Extra View</RouterLink>
 </div>
 
   <RouterView />
